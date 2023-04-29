@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Calculadora LWC">
+        <div class="container slds-box slds-m-around_medium">
+            <lightning-input type="text" label="Digite o primeiro número" onchange={mudouN1}></lightning-input>
+            <lightning-input type="text" label="Digite o segundo número" onchange={mudouN2}></lightning-input>
+
+
+            <div class="slds-m-around_small">
+                <lightning-button variant="brand-outline" label="+" onclick={soma} class="slds-m-around_xx-small">
+                </lightning-button>
+                <lightning-button variant="brand-outline" label="-" onclick={sub} class="slds-m-around_xx-small">
+                </lightning-button>
+                <lightning-button variant="brand-outline" label="/" onclick={div} class="slds-m-around_xx-small">
+                </lightning-button>
+                <lightning-button variant="brand-outline" label="*" onclick={mult} class="slds-m-around_xx-small">
+                </lightning-button>
+                <lightning-button variant="brand-outline" label="Clear" onclick={handleClickClear} class="slds-m-around_xx-small">
+                </lightning-button>
+            </div>
+            <span id="resultado" class="slds-m-around_small" style="color:red"> {resultado} </span>
+        </div>
+
+
+    </lightning-card>
+
+</template>
