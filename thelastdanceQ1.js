@@ -51,6 +51,10 @@ export default class ThelastdanceQ1 extends LightningElement {
         }
 	}
 
+    handleOnClick() {
+			this.mostra = !this.mostra;
+	}
+
     handleClickClear() {
 
         const inputFields = this.template.querySelectorAll( 
