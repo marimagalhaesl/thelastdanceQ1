@@ -4,7 +4,7 @@
             <lightning-input type="text" label="Digite o primeiro número" onchange={mudouN1}></lightning-input>
             <lightning-input type="text" label="Digite o segundo número" onchange={mudouN2}></lightning-input>
 
-
+            <p class="slds-m-around_small">Escolha a operação desejada e em seguida pressione =</p>
             <div class="slds-m-around_small">
                 <lightning-button variant="brand-outline" label="+" onclick={soma} class="slds-m-around_xx-small">
                 </lightning-button>
@@ -14,10 +14,13 @@
                 </lightning-button>
                 <lightning-button variant="brand-outline" label="*" onclick={mult} class="slds-m-around_xx-small">
                 </lightning-button>
+                <lightning-button variant="brand-outline" label="=" onclick={handleOnClick} class="slds-m-around_xx-small">
+                </lightning-button>
                 <lightning-button variant="brand-outline" label="Clear" onclick={handleClickClear} class="slds-m-around_xx-small">
                 </lightning-button>
             </div>
-            <span id="resultado" class="slds-m-around_small" style="color:red"> {resultado} </span>
+
+            <span id="resultado" class="slds-m-around_small" style="color:red" if:true={mostra}> {resultado} </span>
         </div>
 
 
